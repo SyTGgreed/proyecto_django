@@ -1,0 +1,24 @@
+############# comandos python Django  ############
+
+sudo apt-get update  -------> actualizar
+sudo apt-get upgrade  -----> aplicar actualizaciones
+
+sudo snap install --classic code   -----> instalar Visual code
+sudo apt install python3.12-venv   -----> instalar paquete para 
+                                          crear entornos virtuales
+python3 -m venv nombre_del_entorno_virtual 
+        -------> crear un entorno virtual en la carpeta actual
+        
+python3 -m venv ~/nombre_carpeta/nombre_entorno
+        ------> crear entorno en una carpeta dentro del home
+        
+python3 source /nombre_carpeta/nombre_entorno_virtual/bin/activate
+		~/Documentos/nombre_carpeta_proyecto/nombre_carpeta_entorno_virtual/nombre_entorno_virtual/bin/activate
+	----> activar entorno virtual
+deactivate 
+	-----> desactivar entorno virtual
+pip3 install Django      ----> instalar Django
+
+pip3 freeze requirements.txt 
+		----> crea un archivo .txt con las dependecias utilizadas en el actual proyecto
+

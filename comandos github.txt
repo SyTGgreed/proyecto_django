@@ -1,0 +1,32 @@
+####### comandos github  ###########
+
+recomendacion actualizar paquetes primero
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install git     -------> instalar dependencias de git
+git init    ----------> iniciar repositorio
+git remote add origin ulr_repositorio    ----->  push en repositorio existente
+git clone url_del_repositorio     ------>  clona el repositorio de github
+
+git status
+            ---> muestra el estatus actual del proyecto
+
+git add *    ----> añadir todos los archivos 
+git add nombre del archivo    -----> añadir archivo actual
+
+git commit -m "descripcion de cambio"      -----> commit 
+git commit remote
+
+git config     ------> muestra todas las configuraciones que tiene git
+git config --list -----> muestra las configuraciones ACTUALES que tiene git
+
+git config --global user.name "nombre del usuario"   ----> configura el nombre del usuario en git
+git config --global user.email "correo_a_cambiar"    -----> configura el correo de git
+
+git log -------> commit realizados en el repositorio
+git show nombre_del_archivo    ----> cambias realizados en ese archivo
+
+
+
+
