@@ -22,3 +22,14 @@ pip3 install Django      ----> instalar Django
 pip3 freeze requirements.txt 
 		----> crea un archivo .txt con las dependecias utilizadas en el actual proyecto
 
+django-admin --help    ------> mirar documentacion de django
+django-admin startproject nombre_del_proyecto     ----> inicializa un proyecto con el nombre especificado
+
+se crea un archivo manage.py -----> todos los comandos se ejecutan con el manage.py a nivel de proyecto
+
+python3 manage.py --help    ------> comandos que pueden ejecutarse con el manage.py
+python3 manage.py runserver    ----> inicia un servidor de desarrollo y nos muestra la url donde esta corriendo la 
+					aplicacion 
+control + c  -----> detener server
+
+
