@@ -31,5 +31,15 @@ python3 manage.py --help    ------> comandos que pueden ejecutarse con el manage
 python3 manage.py runserver    ----> inicia un servidor de desarrollo y nos muestra la url donde esta corriendo la 
 					aplicacion 
 control + c  -----> detener server
+python3 manage.py startapp nombre_de_la_app   -----> crea una app con el nombre especificado
 
+primero creamos un modelo en models.py
+creamos la vista en views.py
+se crea la carpeta template y ahi mismo otra carpeta con el nombre de la app (my_first_app) y despues
+	el archivo .html especificado en la vista. 
+	
+en visual estudio code usar extension jinja para hacer uso de for, if y demas en html
+
+python3 manage.py migrations   -----> corre todas las migraciones
+python3 manage.py makemigrations   ------> trasnfiere las migraciones a las tablas de la base de datos
 

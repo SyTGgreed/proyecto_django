@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'my_first_app',      #  registro de la nueva aplicacion para que django lo lea
 ]
 
 MIDDLEWARE = [
