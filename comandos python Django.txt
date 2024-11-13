@@ -42,4 +42,18 @@ en visual estudio code usar extension jinja para hacer uso de for, if y demas en
 
 python3 manage.py migrations   -----> corre todas las migraciones
 python3 manage.py makemigrations   ------> trasnfiere las migraciones a las tablas de la base de datos
+sudo apt update -----> actualizar gestor de paquetes
+sudo apt upgrade   ----> aplicar actualizaciones
+sudo apt install sqlite3   -----> instalar sqlite3
 
+python3 manage.py dbshell   ------->  se conecta a la base de datos y nos muestra
+.tables     -------> muestra las tablas de la base de datos
+.schema nombre_de_la_tabla   -----> nos muestra como fue construida la tabla
+
+#### creacion de campos nuevos en la base de datos #########
+realizar respectivos cambios añadiendo filas o datos en el models.py
+despues realizar un makemigrations y migrate
+
+python3 manage.py shell   ----> abre una terminal de python con django
+control + D -----> salir de la terminal
+my_car.save()  -----> guarda el objeto creado en la base de datos
