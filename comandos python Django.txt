@@ -57,3 +57,30 @@ despues realizar un makemigrations y migrate
 python3 manage.py shell   ----> abre una terminal de python con django
 control + D -----> salir de la terminal
 my_car.save()  -----> guarda el objeto creado en la base de datos
+my_car.title = "mazda" ------> actualiza el campo nombre por el especificado
+				no se actuliza en la base de datos hasta no hacer un .save
+				
+para modificar uno de los atributos del objeto 	
+	--->  para mirar el registro actual nombre_objeto.atributo
+	nombre_objeto.atributo = "nuevo_registro"
+	nombre_objeto.save()   ------> para guardar el dato actualizado
+	select * from nombre_de_la_app_nombre_clase 
+	----> ejemplo -----> select * from my_first_app_car
+	
+	nombre_objeto.delete() -------> para borrar un registro
+	     ejm --->  nuevo_car.delete()
+	     
+
+##### relaciones de tablas django #############
+
+nombre_campo = models.ForeignKey (nombre_clase_a_relacionar, on_delete=models.DO_NOTHING)
+	
+	# se establece la relacion de las tablas, en los parametros se establece la
+        # la clase a relacionar en este caso con publisher
+        # on_delete se utiliza para tomar una decision en caso de que se borre un publisher(editor)
+        # DO_NOTHING  no hace nada, PROTECT no se puede borrar porque aun hay datos con ese publisher
+        
+pip install ipython    ---->  una dependencia que nos ayuda a tener una mejor autocompleto al escribir codigo con 
+				tab
+				
+        # CASCADE si se borra un publisher tambien borra todos los libros relacionados con este
