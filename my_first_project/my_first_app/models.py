@@ -18,6 +18,13 @@ class Publisher(models.Model):    # para observar las relaciones de tablas con d
     def __str__(self) -> str:      # para poder ver en consola
         return self.name
     
+class Author (models.Model):
+    name = models.TextField(max_length=200)
+    birth_day = models.DateField()
+
+    def __str__(self) -> str:
+        return self.name
+    
 class Book(models.Model):                      # clase libros
     title = models.TextField(max_length=200)   # titulo del libro 
     publications_date = models.DateField()     # fecha de publicacion del libro
@@ -26,6 +33,11 @@ class Book(models.Model):                      # clase libros
         # on_delete se utiliza para tomar una decision en caso de que se borre un publisher(editor)
         # DO_NOTHING  no hace nada, PROTECT no se puede borrar porque aun hay datos con ese publisher
         # CASCADE si se borra un publisher tambien borra todos los libros relacionados con este
+
+    authors = models.ManyToManyField(Author, related_name="authors") # creacion de relacion de muchos a muchos
+                                                # como parametros clase a relacionar y nombre que queramos ponerle cuando
+                                                # vayamos a acceder a esta desde el modelo Author
     
     def __str__(self) -> str:
         return self.title             # mostramos el titulo en consola
+    

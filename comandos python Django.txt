@@ -82,5 +82,10 @@ nombre_campo = models.ForeignKey (nombre_clase_a_relacionar, on_delete=models.DO
         
 pip install ipython    ---->  una dependencia que nos ayuda a tener una mejor autocompleto al escribir codigo con 
 				tab
-				
+
         # CASCADE si se borra un publisher tambien borra todos los libros relacionados con este
+        
+########## RELACION MUCHOS A MUCHOS ############
+nombre_campo = models.ManytoManyFielda(nombre_clase_a_relacionar, related_name="authors")
+	---> relacion muchos a muchos como parametros la clase a relacionar y nombre con el que lo vayamos a relacionar
+	     cuando queramos acceder a este por medio de la otra clase (Author)
