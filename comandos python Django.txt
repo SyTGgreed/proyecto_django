@@ -1,4 +1,4 @@
-############# comandos python Django  ############
+		############# comandos python Django  ############
 
 sudo apt-get update  -------> actualizar
 sudo apt-get upgrade  -----> aplicar actualizaciones
@@ -12,7 +12,7 @@ python3 -m venv nombre_del_entorno_virtual
 python3 -m venv ~/nombre_carpeta/nombre_entorno
         ------> crear entorno en una carpeta dentro del home
         
-python3 source /nombre_carpeta/nombre_entorno_virtual/bin/activate
+source /nombre_carpeta/nombre_entorno_virtual/bin/activate
 		~/Documentos/nombre_carpeta_proyecto/nombre_carpeta_entorno_virtual/nombre_entorno_virtual/bin/activate
 	----> activar entorno virtual
 deactivate 
@@ -89,3 +89,9 @@ pip install ipython    ---->  una dependencia que nos ayuda a tener una mejor au
 nombre_campo = models.ManytoManyFielda(nombre_clase_a_relacionar, related_name="authors")
 	---> relacion muchos a muchos como parametros la clase a relacionar y nombre con el que lo vayamos a relacionar
 	     cuando queramos acceder a este por medio de la otra clase (Author)
+	     
+cuando se borra una instancia que creamos por cerrar la terminal podemos crear una nueva de una forma mas rapida y sencilla
+
+book = book.objects.first()
+book
+con .set() se puede setear autores pero recibe como parametro una lista iterable
