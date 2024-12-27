@@ -25,10 +25,15 @@ class Author (models.Model):
     def __str__(self) -> str:
         return self.name
     
+class profile(models.Model):     # creamos una clase perfil 
+    website = models.URLField()   # utilizamos tipo de campo URLField
+    biografia = models.TextField(max_length=500)   # campo biografia
+
+    
 class Book(models.Model):                      # clase libros
     title = models.TextField(max_length=200)   # titulo del libro 
     publications_date = models.DateField()     # fecha de publicacion del libro
-    Publisher = models.ForeignKey(Publisher, on_delete=models.DO_NOTHING)   # se establece la relacion de las tablas, en los parametros se establece la
+    Publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)   # se establece la relacion de las tablas, en los parametros se establece la
                                                # la clase a relacionar en este caso con publisher
         # on_delete se utiliza para tomar una decision en caso de que se borre un publisher(editor)
         # DO_NOTHING  no hace nada, PROTECT no se puede borrar porque aun hay datos con ese publisher
