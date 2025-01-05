@@ -95,3 +95,9 @@ cuando se borra una instancia que creamos por cerrar la terminal podemos crear u
 book = book.objects.first()
 book
 con .set() se puede setear autores pero recibe como parametro una lista iterable
+
+################# URL ##############################
+
+se recomienda por cada aplicacion tener un archivo url
+
+cada carpeta que tenga un __init__.py es un modulo en python
