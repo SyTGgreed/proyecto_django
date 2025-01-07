@@ -16,25 +16,12 @@ Including another URLconf
 """
 from django.http import HttpResponse
 from django.urls import path
-from .models import Author,profile
-
-def my_view(request,*args,**kwargs):      # cuando se agregan datos dinamicamente, se agregan como parametros:
-    print(args)                           # (*args,**kwargs),creamos una vista para hacer prueba
-    print(kwargs)
-    return HttpResponse("")     # ---> respuesta http  con control + . se puede importar automaticamente la clase a usar
-
-def author_view(request, *args,**kwargs):
-    print(args)
-    print(kwargs)
-    author = Author.objects.get(id=kwargs['id'])
-    Profile = profile.objects.get(author_id=kwargs["id"])
-    return HttpResponse(f"Autor: {author.name} - Sitio Web: {profile.website} - Biografia: {profile.biografia}")
-
+from .views import my_test_view, author_view, CarListView, my_view
 urlpatterns = [
     path("listado/", my_view),
-    path("detalle/<int:identificador>", my_view),  # --> podemos agregar dinamicamente ids con django por medio de <>
+    path("detalle/<int:identificador>", my_test_view),  # --> podemos agregar dinamicamente ids con django por medio de <>
                                     # --> tipo de dato, nombre de la variable
-    path("marcas/<str:brand>",my_view),
-
-    path("autor/<int:id>",author_view)
+    #path("marcas/<str:brand>",my_view),      url vista como funcion
+    path("autor/<int:id>",author_view),
+    path("marcas", CarListView.as_view()),     # url vista como clase utilizamos .asview()
 ]
