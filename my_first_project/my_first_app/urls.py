@@ -17,6 +17,7 @@ Including another URLconf
 from django.http import HttpResponse
 from django.urls import path
 from .views import my_test_view, author_view, CarListView, my_view
+
 urlpatterns = [
     path("listado/", my_view),
     path("detalle/<int:identificador>", my_test_view),  # --> podemos agregar dinamicamente ids con django por medio de <>

@@ -2,9 +2,9 @@
 from django import views
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView    # --- ver en documentacion de django TemplateView
 
-from my_first_project.my_first_app.models import Author,profile
+from .models import Author,profile
 
 # Create your views here.
 def my_view(request):   # metodo my_view que recibe un request como parametro y retorna una respuesta
@@ -19,7 +19,7 @@ def my_view(request):   # metodo my_view que recibe un request como parametro y 
                                         # para poder que django encuentre el archivo template se necesita registrarlo
                                         # en la app; en settigns.py INSTALLED APPS
 
-class CarListView(views.TemplateView):                  # creacion de vista por medio de clase
+class CarListView(TemplateView):                  # creacion de vista por medio de clase
     template_name = "my_first_project/my_first_app/car_list.html"
 
     def get_context_data(self):

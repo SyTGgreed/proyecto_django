@@ -101,3 +101,30 @@ con .set() se puede setear autores pero recibe como parametro una lista iterable
 se recomienda por cada aplicacion tener un archivo url
 
 cada carpeta que tenga un __init__.py es un modulo en python
+
+request.__dict__    -----> en la shell muestra los metodos que tiene request
+
+
+###################  TEMPLATES   ######################################
+
+{{ nombre variable }} ------>  creacion de variable con django en html
+{{ var  foo }}    -------> filtros
+		ejemplo : 
+			birth_date = datetime(2023,12,05)
+			--> si queremos mostrar solo el mes y el dia:
+			{{ birth_date | date:"M/d"| lower }}
+			--> los filtros se pueden concatenar con otros filtros en este caso (lower)
+			    que pone todo lo que recibe en minusculas
+		resultado = "12/05"
+		
+		
+{% if,for,url %}   -----> los TAGS nos permiten agregar funcionalidades a nuestro codigo html como:
+		     -hacer una validacion
+		     -recorrer una lista
+		     -mostrar una url dinamica
+		     
+{% endif%}    -----> algunas etiquetas tienen etiqueta de cierre como if y for
+   endfor		
+   
+base.html   -----> archivo que nos permite tener contenido comun para ser reutilizado
+

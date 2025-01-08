@@ -16,12 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-#from my_first_app.views import my_view   # importamos nuestra vista
+from my_first_app.views import my_view   # importamos nuestra vista
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('car_list/',my_view),     # se crea un nuevo path 
-    path('carros/', include('my_first_app.urls'))   #---> para incluir las urls dentro de nuestra aplicacion utilizamos
-                                # include que pide como parametros: (nombre_de_la_aplicacion_o_modulo.nombre_archivo_urls)
-    
+    path('carros/', include('my_first_app.urls')),
+    path('autores/', include('my_first_app.urls'))
 ]
