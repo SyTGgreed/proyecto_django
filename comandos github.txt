@@ -4,6 +4,27 @@ recomendacion actualizar paquetes primero
 sudo apt-get update
 sudo apt-get upgrade
 
+Crear llave SSH:
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+	-reemplazar en las comillas por correo
+	-presionar enter
+	-escribir frase de contraseña si es necesario
+	-confirmar frase
+	-agregar el agente SSH en segundo plano
+	eval "$(ssh-agent -s)"
+	-agregar llave privada SSH  al ssh-agent
+	ssh-add ~/.ssh/id_ed25519
+	
+Agregar clave SSH a cuenta GitHub
+		cat ~/.ssh/id_ed25519.pub
+		-copiar llave
+		-ir a configuracion de github
+			llaves SSH
+			crear llave
+			poner nombre y pegar la llave
+			
+	
+
 sudo apt-get install git     -------> instalar dependencias de git
 git init    ----------> iniciar repositorio
 git remote add origin ulr_repositorio    ----->  push en repositorio existente
